@@ -10,25 +10,28 @@ namespace Week1_prelab
     {
         static void Main(string[] args)
         {
-            string strFirst, strOperand, strNum1, strNum2;
+            string strFirst, strOperand, strNum1, strNum1up, strNum2, strNum2up;
             Int32 intNum1 = 0, intNum2 = 0, intNum3, intResult = 0;
-            Double dbResult;
+            Double dblResult;
 
             Console.WriteLine("Hello There!");
 
             Console.Write("Please enter the first name: ");
             strFirst = Console.ReadLine();
 
+            Console.WriteLine("Hello " + strFirst + "! Let's do some math!");
+
+            Console.Write("Please enter the math operation (PLUS, MINUS, MUTIPLY, DIVIDE): ");
+            strOperand = Console.ReadLine().ToUpper();
+
+
             Console.Write("Please enter the first number: ");
             strNum1 = Console.ReadLine();
+            
 
-            Console.WriteLine("Hello" + strFirst + "! Let's do some math!");
-
-            Console.Write("Please enter the math operation (PLUS, MINUS, MUTIPLY, DIVIDE");
-            strOperand = Console.ReadLine();
-
-            Console.WriteLine("Please write the second number: ");
+            Console.Write("Please write the second number: ");
             strNum2 = Console.ReadLine();
+            
 
 
             intNum1 = Int32.Parse(strNum1);
@@ -42,20 +45,40 @@ namespace Week1_prelab
                     break;
 
                 case "MINUS":
-                    intResult = intNum1 + intNum2;
+                    intResult = intNum1 - intNum2;
                     break;
 
                 case "DIVIDE":
-                    intResult = intNum1 + intNum2;
+                    intResult = intNum1 / intNum2;
                     break;
 
                 case "MULTIPlY":
-                    intResult = intNum1 + intNum2;
+                    intResult = intNum1 * intNum2;
                     break;
 
             }
 
+            dblResult = (Double)intResult;
 
+            if (strOperand == "PLUS")
+            {
+                Console.WriteLine($"\n\nThe sum of " + intNum1 + " and " + intNum2 + " equals: " + dblResult);
+            }
+            else if (strOperand == "MINUS")
+            {
+                Console.WriteLine($"\n\nThe difference of " + intNum1 + " and " + intNum2 + " equals: " + dblResult);
+            }
+            else if (strOperand == "DIVIDE")
+            {
+                Console.WriteLine($"\n\nThe quotient of " + intNum1 + " and " + intNum2 + " equals: " + dblResult);
+            }
+            else if (strOperand == "MULTIPLY")
+            {
+                Console.WriteLine($"\n\nThe product of " + intNum1 + " and " + intNum2 + " equals: " + dblResult);
+            }
+
+            Console.WriteLine("\n\nPress any Key to continue");
+            Console.ReadKey();
         }
     }
 }
