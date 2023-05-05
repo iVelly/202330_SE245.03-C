@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace Lab_4_Classes_Both_Public_and_Private
 {
-    class Program
+    class People
     {
         
         struct Person
