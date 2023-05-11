@@ -29,6 +29,7 @@ namespace Lab_2___C__Loops__Arrays_and_Lists
             //while (again == "Y");
             do
             {
+                Console.WriteLine("\n");
                 Console.WriteLine("Hello There!");
                 Console.Write("Please enter the first name: ");
                 strFirst = Console.ReadLine();
@@ -72,7 +73,7 @@ namespace Lab_2___C__Loops__Arrays_and_Lists
                 Console.WriteLine($"Your Gross Pay is $" + floatGross);
                 Console.WriteLine($"Your net Pay is $" + floatNet);
 
-                Console.WriteLine("\n\nPress 'Y' to continue");
+                Console.WriteLine("\n\nPress 'Y' to continue & 'ENTER' to Display Payroll Report");
                 again = Console.ReadLine().ToUpper();
 
                 intCntr++;
